@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Input } from '../ui/input'
-import { Rating } from '@smastrom/react-rating'
-import '@smastrom/react-rating/style.css'
 import { Button } from '../ui/button'
 import { Loader2 } from 'lucide-react'
 import { StoreContext } from '@/Context/StoreContext'
