@@ -50,40 +50,40 @@ const PersonalDetailForm = ({ enableNext }) => {
             <form onSubmit={onSave}>
                 <div className=' grid grid-cols-2 mt-5 gap-3'>
                     <div>
-                        <label className='text-sm'>First Name</label>
+                        <label className=''>First Name</label>
                         <Input name="firstName" placeholder="First Name" defaultValue={resumeInfo?.firstName} onChange={handleInputChange} required />
                     </div>
 
                     <div>
-                        <label className='text-sm'>Last Name</label>
+                        <label className=''>Last Name</label>
                         <Input name="lastName" placeholder="First Name" defaultValue={resumeInfo?.lastName} onChange={handleInputChange} required />
                     </div>
                     <div className=' col-span-2'>
-                        <label className='text-sm'>Job Title</label>
+                        <label className=''>Job Title</label>
                         <Input name="jobTitle" placeholder="First Name" defaultValue={resumeInfo?.jobTitle} onChange={handleInputChange} required />
                     </div>
                     <div className=' col-span-2'>
-                        <label className='text-sm'>Address</label>
+                        <label className=''>Address</label>
                         <Input name="address" placeholder="First Name" defaultValue={resumeInfo?.address} onChange={handleInputChange} required />
                     </div>
                     <div>
-                        <label className='text-sm'>Phone</label>
+                        <label className=''>Phone</label>
                         <Input name="phone" placeholder="First Name" defaultValue={resumeInfo?.phone} onChange={handleInputChange} required />
                     </div>
                     <div>
-                        <label className='text-sm'>Email</label>
+                        <label className=''>Email</label>
                         <Input name="email" placeholder="First Name" defaultValue={resumeInfo?.email} onChange={handleInputChange} required />
                     </div>
                     <div>
-                        <label className='text-sm'>LinkedIn Profile</label>
+                        <label className=''>LinkedIn Profile</label>
                         <Input name="linkedin" placeholder="LinkedIn Profile Url" defaultValue={resumeInfo?.linkedin} onChange={handleInputChange} required />
                     </div>
                     <div>
-                        <label className='text-sm'>GitHub Profile</label>
+                        <label className=''>GitHub Profile</label>
                         <Input name="github" placeholder="GitHub Profile Url" defaultValue={resumeInfo?.github} onChange={handleInputChange} required />
                     </div>
                     <div>
-                        <label className='text-sm'>LeetCode Profile Url</label>
+                        <label className=''>LeetCode Profile Url</label>
                         <Input name="linkedin" placeholder="LeetCode Profile Url" defaultValue={resumeInfo?.leetcode} onChange={handleInputChange} required />
                     </div>
                 </div>

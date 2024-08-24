@@ -7,15 +7,19 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { Input } from '../ui/input'
+import ProjectSummary from "../ProjectSummary"
+import { Textarea } from '../ui/textarea'
 
 const formField = {
     title: '',
     startDate: '',
     endDate: '',
+    projectDetail: '',
     projectSummary: ''
 }
 
 const ProjectsForm = () => {
+    const PROMPT = 'position titile: {positionTitle} , Depends on position title give me 5-7 bullet points for my experience in resume (Please do not add experince level and No JSON array) , give me result in HTML tags'
 
     const { resumeInfo, setResumeInfo, url } = useContext(StoreContext);
     const [projectList, setProjectList] = useState([formField])
@@ -91,21 +95,25 @@ const ProjectsForm = () => {
                 {projectList.map((item, index) => (
                     <div key={index} className=' grid grid-cols-2 gap-3 border p-3 m-5 rounded-lg'>
                         <div>
-                            <label className=' text-xs'>Project Name</label>
+                            <label className=''>Project Name</label>
                             <Input defaultValue={item.title} name='title' onChange={(event) => handleChange(index, event)} />
                         </div>
 
                         <div>
-                            <label className=' text-xs'>Start Date</label>
+                            <label className=' '>Start Date</label>
                             <Input defaultValue={item.startDate} name='startDate' onChange={(event) => handleChange(index, event)} />
                         </div>
                         <div>
-                            <label className=' text-xs'>End Date</label>
+                            <label className=''>End Date</label>
                             <Input defaultValue={item.endDate} name='endDate' onChange={(event) => handleChange(index, event)} />
+                        </div>
+                        <div>
+                            <label className=' col-span-2'>Project Details</label>
+                            <Textarea defaultValue={item.projectDetail} name='projectDetail' onChange={(event) => handleChange(index, event)} />
                         </div>
                         <div className=' col-span-2'>
 
-                            <RichTextEditor defaultValue={item?.projectSummary} index={index} onRichTextEditorChange={(event) => handleRichTextEditor(event, 'projectSummary', index)} />
+                            <ProjectSummary defaultValue={item?.projectSummary} index={index} projectDetail={item.projectDetail} onRichTextEditorChange={(event) => handleRichTextEditor(event, 'projectSummary', index)} />
                         </div>
                     </div>
                 ))}

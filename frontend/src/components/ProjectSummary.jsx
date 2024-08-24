@@ -6,7 +6,7 @@ import { StoreContext } from '@/Context/StoreContext';
 import { AIchatSession } from '@/AIModel';
 import { toast } from 'react-toastify';
 
-const PROMPT = 'position titile: {positionTitle} , Depends on position title give me 5-7 bullet points for my experience in resume (Please do not add experince level and No JSON array) , give me result in HTML tags. please do not include json array or json only give in html tag format'
+const PROMPT = 'Project Details:- {projectDetail} . I want to add project in my resume. So depends on project details give me 4-5 bullet points which are easily understandle and readable. give me result in HTML tags. please do not include json array or json only give in html tag format.'
 
 const RichTextEditor = ({ onRichTextEditorChange, index, defaultValue }) => {
     const [value, setValue] = useState(defaultValue);
@@ -14,11 +14,11 @@ const RichTextEditor = ({ onRichTextEditorChange, index, defaultValue }) => {
     const [loading, setLoading] = useState(false);
     const GenerateSummary = async () => {
         setLoading(true);
-        if (!resumeInfo.experience[index].title) {
-            toast.error("Please Enter Position Title")
+        if (!resumeInfo.project[index].projectDetail) {
+            toast.error("Please Enter Project Details")
             return;
         }
-        const prompt = PROMPT.replace('{positionTitle}', resumeInfo.experience[index].title);
+        const prompt = PROMPT.replace('{projectDetail}', resumeInfo.project[index].projectDetail);
         const result = await AIchatSession.sendMessage(prompt);
         console.log(prompt);
         console.log(result.response.text());
@@ -32,7 +32,7 @@ const RichTextEditor = ({ onRichTextEditorChange, index, defaultValue }) => {
     return (
         <div>
             <div className=' flex justify-between my-2'>
-                <h2 className=' font-bold text-lg'>Summary</h2>
+                <h2 className=' font-bold text-lg'>Project Summary</h2>
                 <Button onClick={GenerateSummary} variant="outline" size='sm' className=' flex gap-2 border-primary text-primary'>{loading ? <LoaderCircle className=' animate-spin' /> : <><Brain /> Generate From AI</>}</Button>
             </div>
             <EditorProvider>

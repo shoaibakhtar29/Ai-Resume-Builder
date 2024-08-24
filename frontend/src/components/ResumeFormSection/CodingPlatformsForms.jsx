@@ -84,11 +84,11 @@ const CodingPlatformsForms = () => {
                 {codingPlatformsList.map((item, index) => (
                     <div key={index} className=' grid grid-cols-2'>
                         <div className=' m-3'>
-                            <label className='text-sm'>Coding Platform</label>
+                            <label className=''>Coding Platform</label>
                             <Input defaultValue={item.title} name='title' onChange={(event) => handleChange(index, event)} placeholder="LeetCode" />
                         </div>
                         <div className=' m-3'>
-                            <label className='text-sm'>Description</label>
+                            <label className=''>Description</label>
                             <Input defaultValue={item.description} name='description' onChange={(event) => handleChange(index, event)} placeholder="e.g:- Solved 100+ questions on leetcode..." />
                         </div>
                     </div>

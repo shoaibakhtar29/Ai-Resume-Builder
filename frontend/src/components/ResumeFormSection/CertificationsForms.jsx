@@ -74,7 +74,7 @@ const CertificationsForm = ({ enableNext }) => {
                     {certificationsList.map((item, index) => (
                         <div key={index} className=' gap-3 border p-3 m-5 rounded-lg'>
                             <div>
-                                <label className=' text-xs'>Name</label>
+                                <label className=''>Name</label>
                                 <Input defaultValue={item.title} name='title' onChange={(event) => handleChange(index, event)} />
                             </div>
                         </div>

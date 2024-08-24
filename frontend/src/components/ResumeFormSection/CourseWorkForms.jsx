@@ -81,7 +81,7 @@ const CourseWorkForms = () => {
                 {courseList.map((item, index) => (
                     <div key={index} className=''>
                         <div className=' my-3'>
-                            <label className='text-sm'>Course Title</label>
+                            <label className=''>Course Title</label>
                             <Input defaultValue={item.title} name='title' onChange={(event) => handleChange(index, event)} />
                         </div>
                     </div>

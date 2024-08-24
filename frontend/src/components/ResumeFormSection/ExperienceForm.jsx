@@ -100,27 +100,27 @@ const ExperienceForm = ({ enableNext }) => {
                     {experienceList.map((item, index) => (
                         <div key={index} className=' grid grid-cols-2 gap-3 border p-3 m-5 rounded-lg'>
                             <div>
-                                <label className=' text-xs'>Position</label>
+                                <label className=''>Position</label>
                                 <Input defaultValue={item.title} name='title' onChange={(event) => handleChange(index, event)} />
                             </div>
                             <div>
-                                <label className=' text-xs'>Company Name</label>
+                                <label className=''>Company Name</label>
                                 <Input defaultValue={item.companyName} name='companyName' onChange={(event) => handleChange(index, event)} />
                             </div>
                             <div>
-                                <label className=' text-xs'>City</label>
+                                <label className=''>City</label>
                                 <Input defaultValue={item.city} name='city' onChange={(event) => handleChange(index, event)} />
                             </div>
                             <div>
-                                <label className=' text-xs'>State</label>
+                                <label className=''>State</label>
                                 <Input defaultValue={item.state} name='state' onChange={(event) => handleChange(index, event)} />
                             </div>
                             <div>
-                                <label className=' text-xs'>Start Date</label>
+                                <label className=''>Start Date</label>
                                 <Input defaultValue={item.startDate} name='startDate' onChange={(event) => handleChange(index, event)} />
                             </div>
                             <div>
-                                <label className=' text-xs'>End Date</label>
+                                <label className=''>End Date</label>
                                 <Input defaultValue={item.endDate} name='endDate' onChange={(event) => handleChange(index, event)} />
                             </div>
                             <div className=' col-span-2'>

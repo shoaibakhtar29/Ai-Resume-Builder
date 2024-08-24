@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="footer-content">
                 <div className='footer-content-left'>
                     <img src="logo.svg" alt="" />
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quod quis, necessitatibus cumque eveniet mollitia dicta sed provident magnam, aliquid ea dolore maiores! Voluptatum dolores id blanditiis voluptate ad temporibus!</p>
+                    <p>Empower your career with our AI-driven resume builder. Seamlessly create professional resumes tailored to your skills and experience, all with the guidance of cutting-edge AI technology. Start crafting your standout resume today and take the next step in your career journey with ease!</p>
                     <div className="footer-social-icon">
                         <img src="facebook_icon" alt="" />
                         <img src="twitter_icon" alt="" />
@@ -17,10 +17,10 @@ const Footer = () => {
                 <div className='footer-content-center'>
                     <h2>Company</h2>
                     <ul>
-                        <a href=''><li>Home</li></a>
-                        <a href=''><li>About</li></a>
-                        <a href=""><li>Contact</li></a>
-                        <a href=""><li>Privacy Policy</li></a>
+                        <a href='/'><li>Home</li></a>
+                        <a href='/'><li>About</li></a>
+                        <a href="https://shoaibakhtar.org/contact"><li>Contact</li></a>
+                        <a href="https://shoaibakhtar.org/privacy-policy"><li>Privacy Policy</li></a>
                     </ul>
                 </div>
                 <div className='footer-content-right'>

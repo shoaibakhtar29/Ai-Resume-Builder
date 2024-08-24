@@ -79,8 +79,7 @@ function Home() {
                             <h2 className="mt-4 text-xl font-bold text-black">Write prompt for your form</h2>
 
                             <p className="mt-1 text-sm text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-                                distinctio alias voluptatum blanditiis laudantium.
+                                Provide a brief overview of your skills, experience, and career goals. Think of it as giving our AI the blueprint to craft your perfect resume. The more detailed your prompt, the better the AI can tailor the resume to match your unique profile!
                             </p>
                         </a>
 
@@ -93,8 +92,7 @@ function Home() {
                             <h2 className="mt-4 text-xl font-bold text-black">Edit Your form </h2>
 
                             <p className="mt-1 text-sm text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-                                distinctio alias voluptatum blanditiis laudantium.
+                                Review and refine your resume details with ease. In this step, you can customize the AI-generated content to better match your personal style and preferences. Make adjustments, add missing information, and ensure everything looks perfect before moving forward!
                             </p>
                         </a>
 
@@ -107,8 +105,7 @@ function Home() {
                             <h2 className="mt-4 text-xl font-bold text-black">Share & Start Accepting Responses</h2>
 
                             <p className="mt-1 text-sm text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-                                distinctio alias voluptatum blanditiis laudantium.
+                                Your polished resume is ready to go! Easily download your resume in your preferred format or share it directly with employers. With just a click, you’re all set to make a lasting impression!
                             </p>
                         </a>
 
