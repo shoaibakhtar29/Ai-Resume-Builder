@@ -27,7 +27,7 @@ const ViewResume = () => {
 
     const handleDownload = async () => {
         const input = document.getElementById('resumePreview');
-        const canvas = await html2canvas(input);
+        const canvas = await html2canvas(input, { scrollY: -window.scrollY });
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF('p', 'mm', 'a4');
         const imgWidth = 210;

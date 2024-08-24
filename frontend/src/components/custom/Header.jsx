@@ -20,10 +20,10 @@ const Header = () => {
             <Link to={"/"}><img src='logo.svg' alt="logo" width={190} height={190} /></Link>
             <div>
                 <ul className=' hidden md:flex list-none gap-3 mt-2 text-lg font-bold'>
-                    <li className=' hover:text-primary cursor-pointer shadow-sm'>Home</li>
-                    <li className=' hover:text-primary cursor-pointer shadow-sm'>About</li>
-                    <li className=' hover:text-primary cursor-pointer shadow-sm'>Contact</li>
-                    <li className=' hover:text-primary cursor-pointer shadow-sm'>Privacy</li>
+                    <li className=' hover:text-primary cursor-pointer shadow-sm'><a href="/">Home</a></li>
+                    <li className=' hover:text-primary cursor-pointer shadow-sm'><a href="https://shoaibakhtar.org/about" target='_blank'>About</a></li>
+                    <li className=' hover:text-primary cursor-pointer shadow-sm'><a href="https://shoaibakhtar.org/contact" target='_blank'>Contact</a></li>
+                    <li className=' hover:text-primary cursor-pointer shadow-sm'><a href="https://shoaibakhtar.org/privacy" target='_blank'>Privacy</a></li>
                 </ul>
             </div>
             <div>
