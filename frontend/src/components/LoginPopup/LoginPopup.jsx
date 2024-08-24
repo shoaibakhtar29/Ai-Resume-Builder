@@ -43,7 +43,8 @@ const LoginPopup = () => {
             toast.success("Logged In Successfully");
         }
         else {
-            toast.error("Wrong Email/Password");
+            currState === "Login" ? toast.error("Wrong Email/Password")
+                : toast.error("User Already Exists. Please Login")
         }
         setLoading(false);
     }
