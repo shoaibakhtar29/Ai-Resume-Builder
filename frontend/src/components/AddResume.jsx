@@ -70,17 +70,18 @@ const AddResume = () => {
             resumeId: uuid,
             userName: userData.name,
             userEmail: userData.email,
-            firstName: "Default Name",
-            lastName: "Default Name",
-            jobTitle: "job title",
-            email: "email@gmail.com",
-            address: "xyz",
-            phone: "1234567890",
-            summary: "default summary",
-            themeColor: "#ff6666",
-            linkedin: "https://linkedin.com/your-id",
-            github: "https://github.com/your-id",
-            leetcode: "https://leetcode.com/your-id"
+            firstName: "",
+            lastName: "",
+            jobTitle: "",
+            email: "",
+            address: "",
+            phone: "",
+            summary: "",
+            themeColor: "",
+            linkedin: "",
+            github: "",
+            leetcode: "",
+            themeColor: "black"
         }
         try {
             const response = await axios.post(url + "/api/user/add-resume-data", data)

@@ -23,7 +23,7 @@ const FormSection = () => {
             <div className='flex justify-between items-center'>
                 <div className=' flex gap-5'>
                     <Link to={"/dashboard"}><Button><Home /></Button></Link>
-                    <ThemeColor />
+                    {/* <ThemeColor /> */}
                 </div>
                 <div className='flex gap-2'>
                     {activeFormIndex > 1 && <Button size="sm" onClick={() => setActiveFormIndex(activeFormIndex - 1)}><ArrowLeft /></Button>}

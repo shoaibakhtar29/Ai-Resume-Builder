@@ -84,7 +84,7 @@ const PersonalDetailForm = ({ enableNext }) => {
                     </div>
                     <div>
                         <label className=''>LeetCode Profile Url</label>
-                        <Input name="linkedin" placeholder="LeetCode Profile Url" defaultValue={resumeInfo?.leetcode} onChange={handleInputChange} required />
+                        <Input name="leetcode" placeholder="LeetCode Profile Url" defaultValue={resumeInfo?.leetcode} onChange={handleInputChange} required />
                     </div>
                 </div>
                 <div className=' mt-3 flex justify-end'>
