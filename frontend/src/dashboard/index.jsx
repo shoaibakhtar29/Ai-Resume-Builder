@@ -1,5 +1,6 @@
 import AddResume from '@/components/AddResume'
 import ResumeCardItem from '@/components/ResumeCardItem'
+import ResumePreview from '@/components/ResumePreview'
 import { StoreContext } from '@/Context/StoreContext'
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
@@ -23,7 +24,6 @@ const Dashboard = () => {
                     ))
                 }
             </div>
-
         </div>
     )
 }

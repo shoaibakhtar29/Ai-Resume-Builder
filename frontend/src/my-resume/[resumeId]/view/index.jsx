@@ -25,16 +25,24 @@ const ViewResume = () => {
         }
     }
 
-    const handleDownload = async () => {
-        const input = document.getElementById('resumePreview');
-        const canvas = await html2canvas(input);
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        const imgWidth = 210;
-        const imgHeight = canvas.height * imgWidth / canvas.width;
-        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-        pdf.save('resume.pdf');
-        toast.success("Resume Downloaded Successfully")
+    const handleDownload = () => {
+        const resumeElement = document.getElementById('resumePreview'); // The div containing the resume preview
+        const width = resumeElement.offsetWidth;
+        const height = resumeElement.offsetHeight;
+
+        html2canvas(resumeElement).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+
+            // Convert px dimensions to mm for jsPDF
+            const pdfWidth = width * 0.264583; // Convert px to mm
+            const pdfHeight = height * 0.264583; // Convert px to mm
+
+            const pdf = new jsPDF('p', 'mm', [pdfWidth, pdfHeight]);
+
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            pdf.save('resume.pdf');
+            toast.success("Resume Downloaded Successfully");
+        })
     }
 
     useEffect(() => { getResumeInfo() }, [])
@@ -47,7 +55,7 @@ const ViewResume = () => {
                     <Button size='lg' onClick={handleDownload}>Download</Button>
 
                 </div>
-                <div id='resumePreview' className=' p-2 bg-white'>
+                <div id='resumePreview' className=' p-2 bg-white m-3'>
                     <ResumePreview />
                 </div>
             </div>

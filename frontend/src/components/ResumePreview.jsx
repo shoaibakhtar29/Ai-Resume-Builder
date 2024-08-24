@@ -13,7 +13,7 @@ import Certifications from './ResumePreview/Certifications';
 const ResumePreview = () => {
     const { resumeInfo, setResumeInfo, showExperience } = useContext(StoreContext);
     return (
-        <div className=" border p-2">
+        <div className="p-2">
             {/* personal detail */}
 
             <PersonalDetail resumeInfo={resumeInfo} />
