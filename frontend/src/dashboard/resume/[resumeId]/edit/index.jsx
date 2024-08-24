@@ -31,7 +31,12 @@ const EditResume = () => {
     return (
         <div className=' grid grid-cols-1 md:grid-cols-2 p-10 gap-10'>
             <FormSection />
-            <ResumePreview />
+
+            <div className=' p-5 shadow-lg rounded-lg border-t-primary border-t-4 mt-20'>
+                <h2 className=' text-center font-bold text-xl'>Resume Preview</h2>
+                <hr className=' border-1.5 border-black mb-3' />
+                <ResumePreview />
+            </div>
         </div>
     )
 }
