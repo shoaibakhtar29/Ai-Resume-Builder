@@ -51,7 +51,7 @@ function ThemeColor() {
                 <div className='grid grid-cols-5 gap-3'>
                     {colors.map((item, index) => (
                         <div
-                            onClick={() => toast.success("Theme Option Coming Soon")}
+                            onClick={() => onColorSelect(item)}
                             className={`h-5 w-5 rounded-full cursor-pointer
              hover:border-black border
              ${selectedColor == item && 'border border-black'}

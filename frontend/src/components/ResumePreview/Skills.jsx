@@ -4,8 +4,8 @@ import React from 'react'
 const Skills = ({ resumeInfo }) => {
     return (
         <div className=' my-1'>
-            <h2 className=' font-bold mb-2'>Technical Skills</h2>
-            <hr className=' border-black' />
+            <h2 className=' font-bold mb-2' style={{ color: resumeInfo.themeColor }}>Technical Skills</h2>
+            <hr className='' style={{ borderColor: resumeInfo.themeColor }} />
             <div className=' my-1'>
                 <div className=' flex gap-1'>
                     <h2 className=' font-semibold text-sm'>Languages :</h2>
