@@ -27,7 +27,7 @@ const registerUer = async (req, res) => {
         const newUser = new userModel({
             name: name,
             email: email,
-            password: hashedPassword
+            password: password
         });
         const user = await newUser.save();
         const token = jwt.sign({ id: user._id, email: user.email, name: user.name }, jwtSecret)
