@@ -58,7 +58,7 @@ function ThemeColor() {
              `}
                             style={{
                                 background: item
-                            }}>
+                            }} key={index}>
 
                         </div>
                     ))}

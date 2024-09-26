@@ -53,7 +53,7 @@ const addResumeData = async (req, res) => {
 
         });
         const savedData = await newData.save();
-        res.json({ success: true, message: savedData });
+        res.json({ success: true, data: savedData });
     } catch (error) {
         console.log(error);
         res.json({ success: false, message: "Error" })

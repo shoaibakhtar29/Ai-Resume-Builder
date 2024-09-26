@@ -22,7 +22,7 @@ const AddResume = () => {
     const [resumeTitle, setResumeTitle] = useState();
     const [loading, setLoading] = useState(false);
     const [userData, setUserData] = useState({});
-    const { url, userResumeData, setUserResumeData, token } = useContext(StoreContext)
+    const { url, userResumeData, setUserResumeData, token, setResumeInfo } = useContext(StoreContext)
     const navigate = useNavigate();
 
     const getUserResumeInfo = async () => {
@@ -88,7 +88,8 @@ const AddResume = () => {
             if (response.data.success) {
                 setLoading(false);
                 navigate("/dashboard/resume/" + uuid + "/edit");
-                toast.success("Resume Created")
+                toast.success("Resume Created");
+
             }
         } catch (error) {
             console.log(error);
