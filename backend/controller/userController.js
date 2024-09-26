@@ -1,7 +1,6 @@
 import userModel from "../models/userModel.js"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
-import nodemailer from "nodemailer"
 import "dotenv/config"
 
 const jwtSecret = process.env.JWT_SECRET;
@@ -99,6 +98,5 @@ const getUserInfo = async (req, res) => {
         console.log(error);
     }
 }
-
 
 export { registerUer, loginUser, getUserInfo }
